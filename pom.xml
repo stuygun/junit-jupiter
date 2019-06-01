@@ -16,6 +16,7 @@
 
         <dependency.jupiter.api.version>5.4.2</dependency.jupiter.api.version>
         <dependency.jupiter.engine.version>5.4.2</dependency.jupiter.engine.version>
+        <dependency.jupiter.params.version>5.4.2</dependency.jupiter.params.version>
 
         <plugin.maven.surefire.version>2.22.0</plugin.maven.surefire.version>
         <plugin.maven.failsafe.version>2.22.0</plugin.maven.failsafe.version>
@@ -34,6 +35,12 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${dependency.jupiter.engine.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${dependency.jupiter.params.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

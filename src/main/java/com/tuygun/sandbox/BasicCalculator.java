@@ -2,19 +2,27 @@ package com.tuygun.sandbox;
 
 public class BasicCalculator {
 
-    public double add(double a, double b) {
-        return a + b;
+    public int add(int a, int b) {
+        return Math.addExact(a, b);
     }
 
-    public double subtract(double a, double b) {
-        return a - b;
+    public int subtract(int a, int b) {
+        return Math.subtractExact(a, b);
     }
 
-    public double multiple(double a, double b) {
-        return a * b;
+    public int multiple(int a, int b) {
+        return Math.multiplyExact(a, b);
     }
 
-    public double divide(double a, double b) {
-        return a / b;
+    public double divide(int a, int b) {
+        return (double) a / b;
+    }
+
+    public long factorial(int i){
+        if(i == 0){
+            return 1L;
+        } else {
+           return i * factorial(i -1);
+        }
     }
 }
