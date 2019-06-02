@@ -17,6 +17,7 @@
         <dependency.jupiter.api.version>5.4.2</dependency.jupiter.api.version>
         <dependency.jupiter.engine.version>5.4.2</dependency.jupiter.engine.version>
         <dependency.jupiter.params.version>5.4.2</dependency.jupiter.params.version>
+        <dependency.hamcrest.version>2.1</dependency.hamcrest.version>
 
         <plugin.maven.surefire.version>2.22.0</plugin.maven.surefire.version>
         <plugin.maven.failsafe.version>2.22.0</plugin.maven.failsafe.version>
@@ -43,6 +44,13 @@
             <version>${dependency.jupiter.params.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>${dependency.hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -57,6 +65,9 @@
                             junit.jupiter.execution.parallel.mode.default = concurrent
                         </configurationParameters>
                     </properties>
+                    <systemPropertyVariables>
+                        <onDevMachine>false</onDevMachine>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
 
