@@ -50,7 +50,16 @@
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${plugin.maven.surefire.version}</version>
+                <configuration>
+                    <properties>
+                        <configurationParameters>
+                            junit.jupiter.execution.parallel.enabled = true
+                            junit.jupiter.execution.parallel.mode.default = concurrent
+                        </configurationParameters>
+                    </properties>
+                </configuration>
             </plugin>
+
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>${plugin.maven.failsafe.version}</version>
