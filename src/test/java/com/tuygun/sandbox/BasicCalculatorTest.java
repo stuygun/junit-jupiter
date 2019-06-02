@@ -177,9 +177,16 @@ class BasicCalculatorTest {
     @DisplayName("Factorial Related Tests")
     class FactorialTests {
         @Test
-        @DisplayName("Simple Factorial Test")
-        @EnabledIfSystemProperty(named = "onDevMachine", matches = "false")
+        @DisplayName("Simple Factorial Test On Dev Machine")
+        @EnabledIfSystemProperty(named = "onDevMachine", matches = "true")
         void testFactorial() {
+            assertThat(6L, is(BasicCalculator.factorial(3)));
+        }
+
+        @Test
+        @DisplayName("Simple Factorial Test on Test Machine")
+        void testFactorialOnTestEnv() {
+            Assumptions.assumeTrue("false".equals(System.getProperty("onDevMachine")));
             assertThat(362880L, is(BasicCalculator.factorial(9)));
         }
 
