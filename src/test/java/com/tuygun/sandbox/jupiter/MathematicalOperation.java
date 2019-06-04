@@ -1,4 +1,4 @@
-package com.tuygun.sandbox;
+package com.tuygun.sandbox.jupiter;
 
 public class MathematicalOperation {
     public enum Operation {

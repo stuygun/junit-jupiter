@@ -1,4 +1,4 @@
-package com.tuygun.sandbox;
+package com.tuygun.sandbox.jupiter;
 
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.params.converter.ArgumentConversionException;
